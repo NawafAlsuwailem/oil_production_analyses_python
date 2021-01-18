@@ -8,7 +8,7 @@ from service.DBconnect.sqliteConnect import SqliteConnect
 from selenium.webdriver.common.keys import Keys
 
 
-class MyScraper:
+class WebScrapper:
 
     def __init__(self, headless=True):
         self.db = SqliteConnect()
