@@ -1,11 +1,11 @@
 from flask import Flask
 import json
-from service.web_scraper import MyScraper
+from service.web_scraper import WebScrapper
 from flask_cors import CORS
 
 app = Flask(__name__)
 CORS(app)
-myScraper = MyScraper()
+myScraper = WebScrapper()
 
 
 @app.route('/')
