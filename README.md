@@ -32,10 +32,10 @@ The application should have the three main component: Database, Backend, and Fro
 
 ## API
 (Backend)
-get data => /
-get average => /export_avg
-get total => /month_sum
+- get data => /
+- get average => /export_avg
+- get total => /month_sum
 
 (Frontend)
-data table => /
-charts => /charts
+- data table => /
+- charts => /charts
