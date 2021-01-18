@@ -9,9 +9,8 @@ myScraper = MyScraper()
 
 
 @app.route('/')
-def hello_world():
+def getOilExports():
     data = myScraper.scrap()
-
     results = json.dumps(data.fetchall())
     return results
 

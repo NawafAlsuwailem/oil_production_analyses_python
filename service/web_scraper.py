@@ -58,7 +58,8 @@ class MyScraper:
                                 self.db.insertRecord((country, months[i].text, val["f"]))
 
             self.browserExit()
-
+        self.db.generateExportAvg()
+        self.db.generateExportTotal()
         return self.db.retrieveData()
 
 

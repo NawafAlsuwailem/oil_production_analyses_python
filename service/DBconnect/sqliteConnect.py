@@ -44,5 +44,21 @@ class SqliteConnect:
         oilExports = results.fetchall()
         return oilExports
 
+    def generateExportAvg(self):
+        query = "CREATE TABLE IF NOT EXISTS oil_export_avg AS " \
+                "SELECT country, avg(val) AS value_avg " \
+                "FROM oil_export " \
+                "GROUP By country"
+        self.conn.execute(query)
+        self.conn.commit()
+
+    def generateExportTotal(self):
+        query = "CREATE TABLE IF NOT EXISTS oil_export_mont_sum AS " \
+                "SELECT export_date, sum(val) AS value_sum " \
+                "FROM oil_export " \
+                "GROUP By export_date"
+        self.conn.execute(query)
+        self.conn.commit()
+
     def exit(self):
         self.conn.close()
