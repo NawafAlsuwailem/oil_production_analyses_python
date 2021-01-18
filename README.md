@@ -37,4 +37,5 @@ get average => /export_avg
 get total => /month_sum
 
 (Frontend)
-dashboard => /
+data table => /
+charts => /charts
